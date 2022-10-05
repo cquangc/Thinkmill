@@ -49,7 +49,7 @@ tab1, tab2, tab3 = st.tabs(["Load data", "Model", "Results"])
 set_bg_hack_url() #Set the background image
 hide_streamlit_style = """
             <style>
-            #MainMenu {visibility: hidden;}
+            MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             </style>
             """
