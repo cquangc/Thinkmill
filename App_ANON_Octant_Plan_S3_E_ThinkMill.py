@@ -176,7 +176,8 @@ with tab4:
                                        0.216275251, 0.239945131,0.266237311, 0.250750516,
                                        0.361998798, 0.549025344,0.738236778,1.004627822,
                                        1.496675929,2.242933464,2.957109458]
-                
+                # Special note to anyone reading this: these adjustment figures have been anonymised and scrambled from the real empirical figures.
+                # If you want to talk about the real adjustment figures, come talk to octant dot ai dot com.
                 
                 dict_top_down_uplift = dict(zip(Level_of_Certainty, Adjustment_Required))
                 
