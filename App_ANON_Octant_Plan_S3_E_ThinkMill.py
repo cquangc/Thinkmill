@@ -62,7 +62,7 @@ with tab1:
     import streamlit as st
     
     #user_OTP_code = generate_URI_QR_code()
-    src = str(os.path.join('C://', 'Users//', 'config.yml'))
+    src = str(os.path.join('C:/', 'Users/', 'config.yml'))
     with open(src) as file:
         config = yaml.safe_load(file) #, Loader=SafeLoader)
     authenticator = stauth.Authenticate(
