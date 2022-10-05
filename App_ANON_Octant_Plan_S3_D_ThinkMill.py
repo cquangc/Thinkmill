@@ -5,21 +5,11 @@ import numpy as np
 from scipy import stats
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
-import pickle
 from datetime import datetime
 import streamlit as st
-from st_aggrid import AgGrid, GridUpdateMode, JsCode
-from st_aggrid.grid_options_builder import GridOptionsBuilder
-from st_aggrid import AgGrid, GridOptionsBuilder, JsCode
-import pdfplumber
-import pdfkit
-from jinja2 import Environment, PackageLoader, select_autoescape, FileSystemLoader
 from datetime import date
 import streamlit as st
-from streamlit.components.v1 import iframe
 import copy
-import altair as alt
-from PIL import Image
 import streamlit_authenticator as stauth
 import yaml
 import os
@@ -120,8 +110,6 @@ with tab3:
             st.error('Please load data')
         else:
             project_A = copy.deepcopy(shows1)
-            #st.write('File uploaded ',type(shows))
-            #project_A = pd.read_excel('Project_A.xlsx')
             project_A = project_A.dropna()
             project_A_cost_modelling = project_A[project_A['cost_model_status'].isin(['Include'])]#,'TEI'])]
             new_df_project_A = project_A_cost_modelling
@@ -213,17 +201,27 @@ with tab4:
                 ax.legend(bbox_to_anchor=(1.1, 1.05))
                 st.pyplot(plt)
                 st.markdown('----')
-                st.subheader('So what is being demonstrated here 🧐?')
-                st.write('🔐 Firstly we demonstrate a simple log on widget. Multifactor authentication is not shown for deployment simplicity reasons.')
-                st.write('💾 Next, we show a simple file loading widget. To keep deployment simple, the example file has been shared with Thinkmill for loading from local machines. ')
-                st.write('🚧 The risk sliders are intended to show one way that users can produce an additional, complementary Octant output that incorporates user knowledge about the target project.')
-                st.write('The radar chart is a simple way to visualise the risk "thumbprint" for the project that embeds the users belief about the project risk profile.')
-                st.write('The risk factors used in this demo were sourced from peer-reviewed research, but are easy to customise for the user if required (as a premium option).')
-                st.write('The concept behind the sliders is that the more favourable and less risky the project conditions for execution, the lower the cost uplift needs to be.')
-                st.write('📈 The graph above illustrates how the risk sliders now allow for a third reporting option that now incorporates user knowledge, and allows them to control the level of reporting '
-                         'that the PM provides.')
-                st.write('For instance, if the user thinks the Octant forecast is too high/ conservative, the user can adjust the sliders until it reflects their beliefs about the unique risk circumstances'
-                         'of the project. This dynamically updates the cost forecast.')
+                st.subheader('So what is being demonstrated here?')
+                st.write(
+                    'Firstly we demonstrate a simple log on widget. Multifactor authentication is not shown for deployment simplicity reasons.')
+                st.write(
+                    'Next, we show a simple file loading widget. To keep deployment simple, the example file has been shared with Thinkmill for loading from local machines. ')
+                st.write(
+                    'The risk sliders are intended to show one way that users can produce an additional, complementary Octant output that incorporates user knowledge about the target project.')
+                st.write(
+                    'The radar chart is a simple way to visualise the risk "thumbprint" for the project that embeds the users belief about the project risk profile.')
+                st.write(
+                    'The risk factors used in this demo were sourced from peer-reviewed research, but are easy to customise for the user if required (as a premium option).')
+                st.write(
+                    'The concept behind the sliders is that the more favourable and less risky the project conditions for execution, the lower the cost uplift needs to be.')
+                st.write(
+                    'The graph above illustrates how the risk sliders now allow for a third reporting option that now incorporates user knowledge, and allows them to control the level of reporting '
+                    'that the PM provides.')
+                st.write(
+                    'For instance, if the user thinks the Octant forecast is too high/ conservative, the user can adjust the sliders until it reflects their beliefs about the unique risk circumstances'
+                    'of the project. This dynamically updates the cost forecast.')
+
+
 
 
 
